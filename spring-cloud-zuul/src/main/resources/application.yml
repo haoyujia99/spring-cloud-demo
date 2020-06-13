@@ -1,0 +1,15 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: spring-boot-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    spring-boot-provider: /cities/**
